@@ -20,22 +20,20 @@ public class Main {
     public static void solve(BufferedReader reader, BufferedWriter writer) throws IOException {
         // Read the target value
         int target = Integer.parseInt(reader.readLine().trim());
-        System.out.println(target);
 
         // Read the array of integers
         String[] numberStrings = reader.readLine().trim().split(",");
         int[] nums = new int[numberStrings.length];
         for (int i = 0; i < numberStrings.length; i++) {
             nums[i] = Integer.parseInt(numberStrings[i]);
-            System.out.print(nums[i]+" ");
         }
 
-        // // Create an instance of Solution and call minSubArrayLen
-        // Solution solution = new Solution();
-        // int result = solution.minSubArrayLen(target, nums);
+        // Create an instance of Solution and call minSubArrayLen
+        Solution solution = new Solution();
+        int result = solution.minSubArrayLen(target, nums);
 
-        // // Write the result to the output
-        // writer.write(String.valueOf(result));
-        // writer.newLine();
+        // Write the result to the output
+        writer.write(String.valueOf(result));
+        writer.newLine();
     }
 }
